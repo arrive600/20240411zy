@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Our Love Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<audio 
+                     autoplay="autoplay"
+                     loop="loop"
+	     preload="auto"
+	     src="love.mp3">
+	</audio>
+	
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+
+				<span class="space" /><span class="comments">* 执子之手,与子偕老 *</span></span><br />
+				<span class="space" /><span class="comments">* 我喜欢春天的花,夏天的树,秋天的黄昏,冬天的阳光,还有每天的你... </span><br />
+
+				<span class="space" /><span class="comments"> </span><br />
+				Boy I = <span class="keyword">new</span> Boy(<span class="string">"曾毅"</span>)<br />
+				Girl u = <span class="keyword">new</span> Girl(<span class="string">"张颖"</span>)<br />
+				<br>
+
+				<span class="space" /><span class="comments">* 2024年2月1日我们相识的那一天 </span><br />
+				<span class="space" /><span class="comments">* 我没有想到我们的故事由此开始</span><br />
+				<br>
+				I	love(u)<br />
+				<span class="space" /><span class="comments">*在这段时间里，我们互相分享彼此，了解彼此，从相识到相知</span><br />
+				<br>
+				I	meet(u)<br />
+				<span class="space" /><span class="comments">* 你是一个可爱聪明，美丽又有点小任性的女生</span><br />
+				<br>
+				I	and(u)<br />
+				<span class="space" /><span class="comments">*我感觉我们聊得很来，每次都想跟你多聊一会 </span><br />
+				<br>
+				I	takeCareOf(u)<br />
+				<span class="space" /><span class="comments">*我其实是一个不太会说甜言蜜语的人</span><br />
+				<span class="space" /><span class="comments">* 我只知道我喜欢你，你就是我的宝宝！</span><br />
+				<br>
+				I	waitFor(u)<br />
+				<span class="space" /><span class="comments">* 2024年4.11，今天是你的生日</span><br />
+				<span class="space" /><span class="comments">* 很可惜，我不能陪在你身旁。但我仍在相隔千公里距离的地方与你同在</span><br />
+				<br />
+
+				<span class="space" /><span class="comments">* 当你看到这，我为你准备了个惊喜，宝宝可以期待下哟！</span><br />
+				<span class="space" /><span class="comments">* 有些意外是意料之中，有些意外是意料之外，而你，是我意料之外的意外                                                              ——《撒野》</span><br />
+				<span class="space" /><span class="comments"> ......</span><br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">至若春和景明，唯有我和你。希望宝宝在新的一岁，天天开心，可可爱爱，越来越漂亮！						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						Love u Forever and Ever.<br />
+						<div class="signature">-- 最爱你的  Mr.曾</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2024, 2, 1);
+		together.setHours(0);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+			document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
